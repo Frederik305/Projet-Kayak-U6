@@ -1,0 +1,74 @@
+{
+    "name": "KayakInput",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "ed62c00e-783d-4e87-8a84-ee47f4b82da1",
+            "actions": [
+                {
+                    "name": "PaddleLeft",
+                    "type": "Value",
+                    "id": "aa89e4ee-ea44-45b6-b0f1-7e2fa6438b08",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "PaddleRight",
+                    "type": "Button",
+                    "id": "4f81e1f3-aff6-4839-a0ff-09a8591c6a9a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "a1a17c34-2ae5-44c3-b704-2482db429b7f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "077538a6-7641-4682-a41a-9f14ac90403e",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PaddleLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5ceff4e7-42ed-41a0-93fc-19f682974dd1",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PaddleRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "404c0f5f-66ee-470f-9700-f6083587199d",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
