@@ -189,7 +189,7 @@ MonoBehaviour:
   causticsDirectionalShadow: 0
   causticsDirectionalShadowDimmer: 0.25
   renderingLayerMask: 1
-  debugMode: 3
+  debugMode: 0
   waterMaskDebugMode: 0
   waterCurrentDebugMode: 0
   currentDebugMultiplier: 1
