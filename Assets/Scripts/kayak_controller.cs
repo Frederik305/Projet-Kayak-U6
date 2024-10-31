@@ -37,7 +37,7 @@ public class KayakController : MonoBehaviour
         var playerInput = GetComponent<PlayerInput>();
         _paddleRightAction = playerInput.actions["PaddleRight"];
         _paddleLeftAction = playerInput.actions["PaddleLeft"];
-        lookAction = playerInput.actions["Look"];
+        //lookAction = playerInput.actions["Look"];
     }
 
     private void OnEnable()
@@ -48,7 +48,7 @@ public class KayakController : MonoBehaviour
         _paddleLeftAction.performed += ctx => OnPaddlingLeft();
         _paddleLeftAction.canceled += ctx => OnPaddlingLeftReleased();
 
-        lookAction.performed += ctx => OnLook(ctx);
+        //lookAction.performed += ctx => OnLook(ctx);
     }
 
     private void OnDisable()
@@ -59,7 +59,7 @@ public class KayakController : MonoBehaviour
         _paddleLeftAction.performed -= ctx => OnPaddlingLeft();
         _paddleLeftAction.canceled -= ctx => OnPaddlingLeftReleased();
 
-        lookAction.performed -= ctx => OnLook(ctx);
+        //lookAction.performed -= ctx => OnLook(ctx);
     }
 
     void OnPaddlingRight()
@@ -119,10 +119,30 @@ public class KayakController : MonoBehaviour
         }
     }
 
-    private void OnLook(InputAction.CallbackContext context)
+    /*private void OnLook(InputAction.CallbackContext context)
     {
         // Récupérer le mouvement de la souris ou du joystick
         Vector2 lookInput = context.ReadValue<Vector2>();
+
+        // Appliquer la sensibilité
+        float mouseX = lookInput.x * mouseHorizontalSensitivity * Time.deltaTime;
+        float mouseY = lookInput.y * mouseVerticalSensitivity * Time.deltaTime;
+
+        // Gérer la rotation verticale (axe X)
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Limiter la rotation verticale
+
+        // Gérer la rotation horizontale (axe Y)
+        yRotation += mouseX; // Ajouter l'entrée de la souris à la rotation horizontale
+        yRotation = Mathf.Clamp(yRotation, -140f, 140f);
+
+        // Appliquer la rotation sur les deux axes
+        camera.transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+    }*/
+    private void Update()
+    {
+        // Récupérer le mouvement de la souris ou du joystick
+        Vector2 lookInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
         // Appliquer la sensibilité
         float mouseX = lookInput.x * mouseHorizontalSensitivity * Time.deltaTime;
