@@ -23,6 +23,7 @@ public class Floater : MonoBehaviour
         objectWithFloaters.AddForceAtPosition(Physics.gravity / floaters, transform.position, ForceMode.Acceleration);
 
         Search.startPositionWS = transform.position;
+        Search.includeDeformation = true;
         waterSurface.ProjectPointOnWaterSurface(Search, out SearchResult);
 
         // Si le kayak est sous la surface de l'eau
