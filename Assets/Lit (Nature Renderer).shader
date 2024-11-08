@@ -1498,7 +1498,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RayTracingCommon.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPassRayTracingDebug.hlsl"
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
 
             ENDHLSL
         }
