@@ -4286,7 +4286,7 @@ PrefabInstance:
     - target: {fileID: 5528605685080874452, guid: f34ea50c17cf5bb488fac54dfc893aa1, type: 3}
       propertyPath: sharedProfile
       value: 
-      objectReference: {fileID: 11400000, guid: e2ff8ec4608d9724fa85734809973387, type: 2}
+      objectReference: {fileID: 11400000, guid: 56ceeba86b372794e8b5bc20db4b61cb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11147,7 +11147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleMode: 1
   regionSize: {x: 5.4716415, y: 6.8936157}
-  amplitude: 3.07
+  amplitude: 0.15
   surfaceFoamDimmer: 1
   deepFoamDimmer: 1
   resolution: {x: 256, y: 256}
@@ -11179,15 +11179,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2545664465771026526, guid: b6c3b4ce60504774aaa8d1b890ee6444, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.83
+      value: 39.42
       objectReference: {fileID: 0}
     - target: {fileID: 2545664465771026526, guid: b6c3b4ce60504774aaa8d1b890ee6444, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.66
+      value: 22.358
       objectReference: {fileID: 0}
     - target: {fileID: 2545664465771026526, guid: b6c3b4ce60504774aaa8d1b890ee6444, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 160.911
+      value: 159.63
       objectReference: {fileID: 0}
     - target: {fileID: 2545664465771026526, guid: b6c3b4ce60504774aaa8d1b890ee6444, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11734,10 +11734,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: foam
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: ripples
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: caustics
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
@@ -11745,8 +11749,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: underWater
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: deformation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: causticsBand
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: ripplesChaos
@@ -11755,10 +11767,22 @@ PrefabInstance:
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: customMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: cd9666a5ab956d9438e35dd19729d3b1, type: 2}
+      objectReference: {fileID: -876546973899608171, guid: edaddfad4c6109e43925ee6dfc587d20, type: 3}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: deformationRes
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: foamResolution
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: foamSmoothness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: largeWindSpeed
-      value: 17
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: repetitionSize
@@ -11773,12 +11797,48 @@ PrefabInstance:
       value: 5.91
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: ambientScattering
+      value: 0.268
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: decalRegionAnchor
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: refractionColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: refractionColor.g
+      value: 0.094412796
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: refractionColor.r
+      value: 0.003988704
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: ripplesMotionMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: scatteringColor.b
+      value: 0.7615293
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: scatteringColor.g
+      value: 0.6238361
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: scatteringColor.r
+      value: 0.2611591
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: absorptionDistance
+      value: 12.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: simulationFoamMask
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: waterFoamDebugMode
@@ -11789,6 +11849,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: causticsTilingFactor
+      value: 1.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: largeBand0Multiplier
       value: 0.085
       objectReference: {fileID: 0}
@@ -11797,16 +11861,40 @@ PrefabInstance:
       value: 0.166
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: virtualPlaneDistance
+      value: 3.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: maxRefractionDistance
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: maximumHeightOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: waterCurrentDebugMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: currentDebugMultiplier
-      value: 4.79
+      value: 1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: directLightTipScattering
+      value: 0.284
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: largeCurrentMapInfluence
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: directLightBodyScattering
+      value: 0.352
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
+      propertyPath: foamPersistenceMultiplier
+      value: 0.559
       objectReference: {fileID: 0}
     - target: {fileID: 1470875229132765780, guid: 31b9a5d5628f5634da89d59ebe102b4f, type: 3}
       propertyPath: supportSimulationFoamMask

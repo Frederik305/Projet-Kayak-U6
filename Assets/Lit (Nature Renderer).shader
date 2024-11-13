@@ -387,7 +387,7 @@ Shader "HDRP/Lit (Nature Renderer)"
             #pragma fragment Frag
 
             #pragma editor_sync_compilation
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -429,7 +429,7 @@ Shader "HDRP/Lit (Nature Renderer)"
             #pragma fragment Frag
 
             #pragma editor_sync_compilation
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -525,7 +525,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -600,7 +600,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -640,7 +640,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -707,7 +707,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -779,7 +779,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -842,7 +842,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -960,7 +960,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -1097,7 +1097,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -1135,7 +1135,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -1166,7 +1166,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma multi_compile_instancing
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
@@ -1202,7 +1202,7 @@ Shader "HDRP/Lit (Nature Renderer)"
 
             #pragma vertex Vert
             #pragma fragment Frag
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
             #pragma instancing_options procedural:SetupNatureRenderer forwardadd renderinglayer
 
             ENDHLSL
@@ -1272,7 +1272,7 @@ Shader "HDRP/Lit (Nature Renderer)"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RayTracingCommon.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitData.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPassRaytracingIndirect.hlsl"
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
 
             ENDHLSL
         }
@@ -1333,7 +1333,7 @@ Shader "HDRP/Lit (Nature Renderer)"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RayTracingCommon.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitData.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPassRaytracingForward.hlsl"
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
 
             ENDHLSL
         }
@@ -1384,7 +1384,7 @@ Shader "HDRP/Lit (Nature Renderer)"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitData.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitRayTracing.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPassRaytracingGBuffer.hlsl"
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
 
             ENDHLSL
         }
@@ -1422,7 +1422,7 @@ Shader "HDRP/Lit (Nature Renderer)"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RayTracingCommon.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitData.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPassRaytracingVisibility.hlsl"
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
 
             ENDHLSL
         }
@@ -1465,7 +1465,7 @@ Shader "HDRP/Lit (Nature Renderer)"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RayTracingCommon.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitData.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPassRayTracingSubSurface.hlsl"
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
 
             ENDHLSL
         }
@@ -1563,7 +1563,7 @@ Shader "HDRP/Lit (Nature Renderer)"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitData.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Lit/LitPathTracing.hlsl"
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPassPathTracing.hlsl"
-            #include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
+            //#include "Assets/Visual Design Cafe/Nature Renderer/Shader Includes/Nature Renderer.templatex"
 
             ENDHLSL
         }
