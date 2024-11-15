@@ -1299,7 +1299,7 @@
     "m_Title": "Read From Simulation",
     "m_Position": {
         "x": -770.0,
-        "y": 86.0
+        "y": 86.00000762939453
     }
 }
 
@@ -2674,7 +2674,7 @@
     "m_ShaderOutputName": "B",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.9800000190734863,
+        "x": 0.0,
         "y": 2.0,
         "z": 2.0,
         "w": 2.0
@@ -3087,8 +3087,8 @@
     "m_ObjectId": "ab0657960ce64c418f090acef9b10025",
     "m_Title": "Read From Simulation",
     "m_Position": {
-        "x": 889.9998779296875,
-        "y": -209.99996948242188
+        "x": 890.0,
+        "y": -210.00003051757813
     }
 }
 
@@ -4028,7 +4028,7 @@
     "m_Title": "Depth - PixelDepth (Foam on borders)",
     "m_Position": {
         "x": -1308.0,
-        "y": 534.0
+        "y": 534.0000610351563
     }
 }
 
