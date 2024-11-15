@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7536331347223192053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2434689897726100854, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 296e3d7d950036c4fa0f3deacd4f5e5f, type: 2}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 64.659676
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.003607
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 148.98825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567674796914097689, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235985093343962275, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
+      propertyPath: m_Name
+      value: namaqualand_boulder_03_4k Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 261dfff96cf234b42acf74da4581659a, type: 3}
