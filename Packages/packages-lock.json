@@ -170,6 +170,12 @@
         "com.unity.render-pipelines.core": "17.0.3"
       }
     },
+    "com.unity.rendering.denoising": {
+      "version": "1.0.5",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.rendering.light-transport": {
       "version": "1.0.1",
       "depth": 2,
@@ -276,7 +282,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.4",
+      "version": "1.9.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
