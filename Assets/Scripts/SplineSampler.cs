@@ -68,7 +68,7 @@ public class SplineSampler : MonoBehaviour
         return curvature;
     }
 
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         // Draw spheres at the central position, p1, and p2
         Handles.color = Color.red;
@@ -81,5 +81,5 @@ public class SplineSampler : MonoBehaviour
         Handles.color = Color.green;
         // Draw a line between p1 and p2 to represent the width
         Handles.DrawLine(p1, p2);
-    }*/
+    }
 }
