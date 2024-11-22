@@ -6,22 +6,13 @@
             "id": "ed62c00e-783d-4e87-8a84-ee47f4b82da1",
             "actions": [
                 {
-                    "name": "PaddleLeft",
+                    "name": "Move",
                     "type": "Value",
                     "id": "aa89e4ee-ea44-45b6-b0f1-7e2fa6438b08",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "PaddleRight",
-                    "type": "Button",
-                    "id": "4f81e1f3-aff6-4839-a0ff-09a8591c6a9a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 },
                 {
                     "name": "Look",
@@ -35,26 +26,59 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "077538a6-7641-4682-a41a-9f14ac90403e",
+                    "name": "WASD",
+                    "id": "bb992c45-1250-4ff9-a7ad-a8dce888268e",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Up",
+                    "id": "d9a75c17-248e-4ce5-b50a-c0c727292ea4",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "bd340745-6816-49e3-b1d0-22b1265f0a8e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "9d0da1bb-45c9-4127-832b-ddcb62751d65",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PaddleLeft",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "5ceff4e7-42ed-41a0-93fc-19f682974dd1",
+                    "name": "Right",
+                    "id": "8f095fe9-d196-495b-9ea3-f2de300bdc01",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PaddleRight",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",

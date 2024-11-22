@@ -28,22 +28,13 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
             ""id"": ""ed62c00e-783d-4e87-8a84-ee47f4b82da1"",
             ""actions"": [
                 {
-                    ""name"": ""PaddleLeft"",
+                    ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""aa89e4ee-ea44-45b6-b0f1-7e2fa6438b08"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""PaddleRight"",
-                    ""type"": ""Button"",
-                    ""id"": ""4f81e1f3-aff6-4839-a0ff-09a8591c6a9a"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Look"",
@@ -57,26 +48,59 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""077538a6-7641-4682-a41a-9f14ac90403e"",
+                    ""name"": ""WASD"",
+                    ""id"": ""bb992c45-1250-4ff9-a7ad-a8dce888268e"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Up"",
+                    ""id"": ""d9a75c17-248e-4ce5-b50a-c0c727292ea4"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Down"",
+                    ""id"": ""bd340745-6816-49e3-b1d0-22b1265f0a8e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Left"",
+                    ""id"": ""9d0da1bb-45c9-4127-832b-ddcb62751d65"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PaddleLeft"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""5ceff4e7-42ed-41a0-93fc-19f682974dd1"",
+                    ""name"": ""Right"",
+                    ""id"": ""8f095fe9-d196-495b-9ea3-f2de300bdc01"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PaddleRight"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -96,8 +120,7 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
 }");
         // New action map
         m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
-        m_Newactionmap_PaddleLeft = m_Newactionmap.FindAction("PaddleLeft", throwIfNotFound: true);
-        m_Newactionmap_PaddleRight = m_Newactionmap.FindAction("PaddleRight", throwIfNotFound: true);
+        m_Newactionmap_Move = m_Newactionmap.FindAction("Move", throwIfNotFound: true);
         m_Newactionmap_Look = m_Newactionmap.FindAction("Look", throwIfNotFound: true);
     }
 
@@ -165,15 +188,13 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
     // New action map
     private readonly InputActionMap m_Newactionmap;
     private List<INewactionmapActions> m_NewactionmapActionsCallbackInterfaces = new List<INewactionmapActions>();
-    private readonly InputAction m_Newactionmap_PaddleLeft;
-    private readonly InputAction m_Newactionmap_PaddleRight;
+    private readonly InputAction m_Newactionmap_Move;
     private readonly InputAction m_Newactionmap_Look;
     public struct NewactionmapActions
     {
         private @KayakInput m_Wrapper;
         public NewactionmapActions(@KayakInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @PaddleLeft => m_Wrapper.m_Newactionmap_PaddleLeft;
-        public InputAction @PaddleRight => m_Wrapper.m_Newactionmap_PaddleRight;
+        public InputAction @Move => m_Wrapper.m_Newactionmap_Move;
         public InputAction @Look => m_Wrapper.m_Newactionmap_Look;
         public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
         public void Enable() { Get().Enable(); }
@@ -184,12 +205,9 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Add(instance);
-            @PaddleLeft.started += instance.OnPaddleLeft;
-            @PaddleLeft.performed += instance.OnPaddleLeft;
-            @PaddleLeft.canceled += instance.OnPaddleLeft;
-            @PaddleRight.started += instance.OnPaddleRight;
-            @PaddleRight.performed += instance.OnPaddleRight;
-            @PaddleRight.canceled += instance.OnPaddleRight;
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
@@ -197,12 +215,9 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(INewactionmapActions instance)
         {
-            @PaddleLeft.started -= instance.OnPaddleLeft;
-            @PaddleLeft.performed -= instance.OnPaddleLeft;
-            @PaddleLeft.canceled -= instance.OnPaddleLeft;
-            @PaddleRight.started -= instance.OnPaddleRight;
-            @PaddleRight.performed -= instance.OnPaddleRight;
-            @PaddleRight.canceled -= instance.OnPaddleRight;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
@@ -225,8 +240,7 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
     public NewactionmapActions @Newactionmap => new NewactionmapActions(this);
     public interface INewactionmapActions
     {
-        void OnPaddleLeft(InputAction.CallbackContext context);
-        void OnPaddleRight(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
     }
 }
