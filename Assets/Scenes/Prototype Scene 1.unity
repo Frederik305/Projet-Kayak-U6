@@ -9244,7 +9244,7 @@ MonoBehaviour:
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
-  m_VolumetricDimmer: 1
+  m_VolumetricDimmer: 11
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
   m_AffectDiffuse: 1
@@ -9321,7 +9321,7 @@ MonoBehaviour:
     m_UseOverride: 1
     m_Level: 0
   m_ShadowDimmer: 1
-  m_VolumetricShadowDimmer: 1
+  m_VolumetricShadowDimmer: 0.994
   m_ShadowFadeDistance: 10000
   m_UseContactShadow:
     m_Override: 0
@@ -9375,7 +9375,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 100000
+  m_Intensity: 130000
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9437,13 +9437,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571684907}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4796519, y: -0.40084454, z: 0.6609317, w: 0.41524342}
-  m_LocalPosition: {x: -5.12, y: 72.1, z: 66.6}
+  m_LocalRotation: {x: 0.29464796, y: -0.70437664, z: 0.28808784, w: 0.5779633}
+  m_LocalPosition: {x: 171, y: 87.5, z: 11.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 68.157, y: 54.034, z: 153.784}
+  m_LocalEulerAnglesHint: {x: 131.717, y: 75.561, z: 172.915}
 --- !u!1 &1572262069
 GameObject:
   m_ObjectHideFlags: 0
