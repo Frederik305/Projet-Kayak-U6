@@ -2026,64 +2026,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d35e7a5583b5d744890d28997d31b274, type: 3}
---- !u!1 &1336782144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1336782147}
-  - component: {fileID: 1336782146}
-  - component: {fileID: 1336782145}
-  m_Layer: 0
-  m_Name: SetOptions
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1336782145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336782144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168a95124b1c75840996ece852b63819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1336782146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336782144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ddcfbf2e64da44d9aa789eabdf3a6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kayak: {fileID: 0}
---- !u!4 &1336782147
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336782144}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.972897, y: 23.579174, z: 162.38689}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1470201528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,8 +2053,8 @@ WindZone:
   m_Enabled: 1
   m_Mode: 0
   m_Radius: 20
-  m_WindMain: 0.88
-  m_WindTurbulence: 0.88
+  m_WindMain: 0.4
+  m_WindTurbulence: 0.2
   m_WindPulseMagnitude: 0.1
   m_WindPulseFrequency: 0.1
 --- !u!4 &1470201530
@@ -2389,11 +2331,11 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6030
+  m_ColorTemperature: 5580
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 9.94e-43, y: 9.4e-44, z: 0, w: 4.810928e+9}
   m_UseBoundingSphereOverride: 0
@@ -2412,13 +2354,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571684907}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08437217, y: -0.82507694, z: 0.3833193, w: 0.4064427}
+  m_LocalRotation: {x: -0.7740928, y: 0.3780399, z: 0.24279445, w: -0.44600108}
   m_LocalPosition: {x: 171, y: 87.5, z: 11.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 135.483, y: -661.8, z: 193.989}
+  m_LocalEulerAnglesHint: {x: 30.459, y: -124.18, z: 248.47}
 --- !u!1001 &1572886456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4407,4 +4349,3 @@ SceneRoots:
   - {fileID: 8358731036733417987}
   - {fileID: 383340737}
   - {fileID: 1509668108}
-  - {fileID: 1336782147}
