@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: 1
   enable:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   tracing:
     m_OverrideState: 1
     m_Value: 1
@@ -138,6 +138,7 @@ MonoBehaviour:
     m_Value:
     - {fileID: 11400000, guid: 404820c4cf36ad944862fa59c56064f0, type: 2}
     - {fileID: 11400000, guid: 2384dbf2c1c420f45a792fbc315fbfb1, type: 2}
+    - {fileID: 11400000, guid: 879ffae44eefa4412bb327928f1a96dd, type: 2}
 --- !u!114 &-7836478165302224918
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -298,7 +299,7 @@ MonoBehaviour:
   active: 1
   rayTracing:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   sampleCount:
     m_OverrideState: 1
     m_Value: 1
@@ -713,7 +714,7 @@ MonoBehaviour:
   active: 1
   enable:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   compositionMode:
     m_OverrideState: 1
     m_Value: 0
@@ -1446,7 +1447,7 @@ MonoBehaviour:
     m_Value: 1
   enabled:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   colorMode:
     m_OverrideState: 1
     m_Value: 1
@@ -1479,7 +1480,7 @@ MonoBehaviour:
     m_Value: 400
   enableVolumetricFog:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   albedo:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -1552,6 +1553,21 @@ MonoBehaviour:
   maximumIntensity:
     m_OverrideState: 1
     m_Value: 10
+  denoising:
+    m_OverrideState: 1
+    m_Value: 0
+  useAOVs:
+    m_OverrideState: 1
+    m_Value: 1
+  temporal:
+    m_OverrideState: 1
+    m_Value: 0
+  separateVolumetrics:
+    m_OverrideState: 1
+    m_Value: 0
+  asyncDenoising:
+    m_OverrideState: 1
+    m_Value: 1
   skyImportanceSampling:
     m_OverrideState: 1
     m_Value: 0
@@ -2406,7 +2422,7 @@ MonoBehaviour:
   active: 1
   enable:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   opacity:
     m_OverrideState: 1
     m_Value: 1
@@ -2428,7 +2444,7 @@ MonoBehaviour:
     m_Value: 1
   rayTracing:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   intensity:
     m_OverrideState: 1
     m_Value: 0.5
