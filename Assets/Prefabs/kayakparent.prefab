@@ -861,7 +861,6 @@ GameObject:
   - component: {fileID: 4765411530967798634}
   - component: {fileID: 896634858188300165}
   - component: {fileID: -4796855517314785662}
-  - component: {fileID: -7359216911088843365}
   m_Layer: 0
   m_Name: kayakparent
   m_TagString: kayak
@@ -1025,28 +1024,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-7359216911088843365
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625220601402287881}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3256123080762291287, guid: 5fd9dc18c156ee04cabe8ca482b86d62, type: 3}
 --- !u!1 &5699755752600262479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1326,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

@@ -21,7 +21,6 @@ public class Floater : MonoBehaviour
     private void FixedUpdate()
     {
         objectWithFloaters.AddForceAtPosition(Physics.gravity / floaters, transform.position, ForceMode.Acceleration);
-
         
         Search.startPositionWS = transform.position;
         Search.includeDeformation = true;
