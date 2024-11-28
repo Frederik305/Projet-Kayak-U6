@@ -222,7 +222,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0
+  currentSpeed: 0.2
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &1552020117248443377
@@ -409,7 +409,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0
+  currentSpeed: 0.2
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &3839688595012410112
@@ -462,7 +462,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0
+  currentSpeed: 0.2
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &4574981076838814046
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0
+  currentSpeed: 0.2
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &6060971382356184433
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0
+  currentSpeed: 0.2
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &7226593161648126620
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0
+  currentSpeed: 0.2
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &7832900004836505054
