@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - kayak
+  - MiniMap
   layers:
   - Default
   - TransparentFX
