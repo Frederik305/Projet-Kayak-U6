@@ -30,11 +30,22 @@ public class KayakController : MonoBehaviour
     private float currentTorque = 1f;
     private Coroutine paddleForceCoroutine;
     private Vector2 entreeMouvement;
+    private GameSession gameSession;
 
     private void Start()
     {
         // Verrouiller le curseur pour qu'il ne bouge pas en dehors de la fenêtre de jeu
+        gameSession = FindFirstObjectByType<GameSession>();
         Cursor.lockState = CursorLockMode.Locked;
+    }
+    void OnPause()
+    {
+        gameSession.Pause();
+
+    }
+    void OnResume()
+    {
+        gameSession.Resume();
     }
 
     

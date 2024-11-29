@@ -24,7 +24,7 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
     ""name"": ""KayakInput"",
     ""maps"": [
         {
-            ""name"": ""New action map"",
+            ""name"": ""InGameControl"",
             ""id"": ""ed62c00e-783d-4e87-8a84-ee47f4b82da1"",
             ""actions"": [
                 {
@@ -44,6 +44,15 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""f26d21d5-a7bd-4633-8eec-6a0d772fa81e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -112,21 +121,65 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1cc3e36e-3f30-4a70-a9f2-88fe4e8f598e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""f4302035-a8dc-408c-98cf-73cc212e25ac"",
+            ""actions"": [
+                {
+                    ""name"": ""Resume"",
+                    ""type"": ""Button"",
+                    ""id"": ""4bbdc1b5-a78a-47f1-b8cb-2e77c2463d6b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""ef4e96c3-c4d9-48a9-b41d-fdecaa2d3890"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Resume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // New action map
-        m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
-        m_Newactionmap_Move = m_Newactionmap.FindAction("Move", throwIfNotFound: true);
-        m_Newactionmap_Look = m_Newactionmap.FindAction("Look", throwIfNotFound: true);
+        // InGameControl
+        m_InGameControl = asset.FindActionMap("InGameControl", throwIfNotFound: true);
+        m_InGameControl_Move = m_InGameControl.FindAction("Move", throwIfNotFound: true);
+        m_InGameControl_Look = m_InGameControl.FindAction("Look", throwIfNotFound: true);
+        m_InGameControl_Pause = m_InGameControl.FindAction("Pause", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Resume = m_UI.FindAction("Resume", throwIfNotFound: true);
     }
 
     ~@KayakInput()
     {
-        UnityEngine.Debug.Assert(!m_Newactionmap.enabled, "This will cause a leak and performance issues, KayakInput.Newactionmap.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_InGameControl.enabled, "This will cause a leak and performance issues, KayakInput.InGameControl.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, KayakInput.UI.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -185,35 +238,40 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // New action map
-    private readonly InputActionMap m_Newactionmap;
-    private List<INewactionmapActions> m_NewactionmapActionsCallbackInterfaces = new List<INewactionmapActions>();
-    private readonly InputAction m_Newactionmap_Move;
-    private readonly InputAction m_Newactionmap_Look;
-    public struct NewactionmapActions
+    // InGameControl
+    private readonly InputActionMap m_InGameControl;
+    private List<IInGameControlActions> m_InGameControlActionsCallbackInterfaces = new List<IInGameControlActions>();
+    private readonly InputAction m_InGameControl_Move;
+    private readonly InputAction m_InGameControl_Look;
+    private readonly InputAction m_InGameControl_Pause;
+    public struct InGameControlActions
     {
         private @KayakInput m_Wrapper;
-        public NewactionmapActions(@KayakInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Newactionmap_Move;
-        public InputAction @Look => m_Wrapper.m_Newactionmap_Look;
-        public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
+        public InGameControlActions(@KayakInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_InGameControl_Move;
+        public InputAction @Look => m_Wrapper.m_InGameControl_Look;
+        public InputAction @Pause => m_Wrapper.m_InGameControl_Pause;
+        public InputActionMap Get() { return m_Wrapper.m_InGameControl; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(NewactionmapActions set) { return set.Get(); }
-        public void AddCallbacks(INewactionmapActions instance)
+        public static implicit operator InputActionMap(InGameControlActions set) { return set.Get(); }
+        public void AddCallbacks(IInGameControlActions instance)
         {
-            if (instance == null || m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_InGameControlActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_InGameControlActionsCallbackInterfaces.Add(instance);
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
-        private void UnregisterCallbacks(INewactionmapActions instance)
+        private void UnregisterCallbacks(IInGameControlActions instance)
         {
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
@@ -221,26 +279,80 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
-        public void RemoveCallbacks(INewactionmapActions instance)
+        public void RemoveCallbacks(IInGameControlActions instance)
         {
-            if (m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_InGameControlActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(INewactionmapActions instance)
+        public void SetCallbacks(IInGameControlActions instance)
         {
-            foreach (var item in m_Wrapper.m_NewactionmapActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_InGameControlActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_InGameControlActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public NewactionmapActions @Newactionmap => new NewactionmapActions(this);
-    public interface INewactionmapActions
+    public InGameControlActions @InGameControl => new InGameControlActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_Resume;
+    public struct UIActions
+    {
+        private @KayakInput m_Wrapper;
+        public UIActions(@KayakInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Resume => m_Wrapper.m_UI_Resume;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @Resume.started += instance.OnResume;
+            @Resume.performed += instance.OnResume;
+            @Resume.canceled += instance.OnResume;
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+            @Resume.started -= instance.OnResume;
+            @Resume.performed -= instance.OnResume;
+            @Resume.canceled -= instance.OnResume;
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
+    public interface IInGameControlActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnResume(InputAction.CallbackContext context);
     }
 }

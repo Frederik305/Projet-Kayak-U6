@@ -15,7 +15,7 @@ public class FinishLine : MonoBehaviour
         if (kayakInputs != null)
         {
             kayakInputs.SwitchCurrentActionMap("UI");
-            kayakInputs.enabled = false;
+            
             Debug.Log("Disabled PlayerInput.");
 
             Cursor.visible = true;

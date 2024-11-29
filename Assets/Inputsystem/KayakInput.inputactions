@@ -2,7 +2,7 @@
     "name": "KayakInput",
     "maps": [
         {
-            "name": "New action map",
+            "name": "InGameControl",
             "id": "ed62c00e-783d-4e87-8a84-ee47f4b82da1",
             "actions": [
                 {
@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "f26d21d5-a7bd-4633-8eec-6a0d772fa81e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -88,6 +97,45 @@
                     "processors": "",
                     "groups": "",
                     "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1cc3e36e-3f30-4a70-a9f2-88fe4e8f598e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "f4302035-a8dc-408c-98cf-73cc212e25ac",
+            "actions": [
+                {
+                    "name": "Resume",
+                    "type": "Button",
+                    "id": "4bbdc1b5-a78a-47f1-b8cb-2e77c2463d6b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ef4e96c3-c4d9-48a9-b41d-fdecaa2d3890",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Resume",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
