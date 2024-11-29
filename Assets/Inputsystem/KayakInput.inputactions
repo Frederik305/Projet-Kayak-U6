@@ -142,13 +142,13 @@
             ]
         },
         {
-            "name": "UI",
-            "id": "699b2aba-f2c1-4502-a714-5b3e727e3067",
+            "name": "New action map",
+            "id": "e8d98154-02ca-4a26-af02-b4e0dd6d56d5",
             "actions": [
                 {
                     "name": "New action",
                     "type": "Button",
-                    "id": "70802388-ad0d-48d6-a979-73e9be790d52",
+                    "id": "9e99ad98-36ea-4ddd-a789-a2be78d79169",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -158,7 +158,7 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "3b0d6442-26b4-4708-aba0-c498e9a054e6",
+                    "id": "65629daf-4d40-4e6b-802e-2e0eaae9bf12",
                     "path": "",
                     "interactions": "",
                     "processors": "",

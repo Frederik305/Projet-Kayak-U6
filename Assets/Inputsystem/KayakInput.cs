@@ -147,15 +147,6 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""70802388-ad0d-48d6-a979-73e9be790d52"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -169,10 +160,27 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
                     ""action"": ""Resume"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
+                }
+            ]
+        },
+        {
+            ""name"": ""New action map"",
+            ""id"": ""e8d98154-02ca-4a26-af02-b4e0dd6d56d5"",
+            ""actions"": [
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""9e99ad98-36ea-4ddd-a789-a2be78d79169"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""3b0d6442-26b4-4708-aba0-c498e9a054e6"",
+                    ""id"": ""65629daf-4d40-4e6b-802e-2e0eaae9bf12"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
@@ -194,13 +202,16 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Resume = m_UI.FindAction("Resume", throwIfNotFound: true);
-        m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
+        // New action map
+        m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
+        m_Newactionmap_Newaction = m_Newactionmap.FindAction("New action", throwIfNotFound: true);
     }
 
     ~@KayakInput()
     {
         UnityEngine.Debug.Assert(!m_InGameControl.enabled, "This will cause a leak and performance issues, KayakInput.InGameControl.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, KayakInput.UI.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Newactionmap.enabled, "This will cause a leak and performance issues, KayakInput.Newactionmap.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -325,13 +336,11 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_Resume;
-    private readonly InputAction m_UI_Newaction;
     public struct UIActions
     {
         private @KayakInput m_Wrapper;
         public UIActions(@KayakInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Resume => m_Wrapper.m_UI_Resume;
-        public InputAction @Newaction => m_Wrapper.m_UI_Newaction;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -344,9 +353,6 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
             @Resume.started += instance.OnResume;
             @Resume.performed += instance.OnResume;
             @Resume.canceled += instance.OnResume;
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -354,9 +360,6 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
             @Resume.started -= instance.OnResume;
             @Resume.performed -= instance.OnResume;
             @Resume.canceled -= instance.OnResume;
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -374,6 +377,52 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // New action map
+    private readonly InputActionMap m_Newactionmap;
+    private List<INewactionmapActions> m_NewactionmapActionsCallbackInterfaces = new List<INewactionmapActions>();
+    private readonly InputAction m_Newactionmap_Newaction;
+    public struct NewactionmapActions
+    {
+        private @KayakInput m_Wrapper;
+        public NewactionmapActions(@KayakInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_Newactionmap_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(NewactionmapActions set) { return set.Get(); }
+        public void AddCallbacks(INewactionmapActions instance)
+        {
+            if (instance == null || m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Add(instance);
+            @Newaction.started += instance.OnNewaction;
+            @Newaction.performed += instance.OnNewaction;
+            @Newaction.canceled += instance.OnNewaction;
+        }
+
+        private void UnregisterCallbacks(INewactionmapActions instance)
+        {
+            @Newaction.started -= instance.OnNewaction;
+            @Newaction.performed -= instance.OnNewaction;
+            @Newaction.canceled -= instance.OnNewaction;
+        }
+
+        public void RemoveCallbacks(INewactionmapActions instance)
+        {
+            if (m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(INewactionmapActions instance)
+        {
+            foreach (var item in m_Wrapper.m_NewactionmapActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public NewactionmapActions @Newactionmap => new NewactionmapActions(this);
     public interface IInGameControlActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -383,6 +432,9 @@ public partial class @KayakInput: IInputActionCollection2, IDisposable
     public interface IUIActions
     {
         void OnResume(InputAction.CallbackContext context);
+    }
+    public interface INewactionmapActions
+    {
         void OnNewaction(InputAction.CallbackContext context);
     }
 }
