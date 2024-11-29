@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 263148167}
   - component: {fileID: 263148166}
   - component: {fileID: 263148168}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LineTracer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1303,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: c4107bae4779492458e71a6da8aa513c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1375,7 +1375,7 @@ LineRenderer:
       m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 10
     numCapVertices: 0
     alignment: 0
     textureMode: 1
@@ -2764,7 +2764,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 80
+    m_Bits: 88
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 1
