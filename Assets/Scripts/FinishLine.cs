@@ -5,6 +5,8 @@ public class FinishLine : MonoBehaviour
 {
     private void OnTriggerEnter(Collider collision)
     {
+
+
         Debug.Log("Fin");
 
         GameObject collidedObject = collision.gameObject;
@@ -23,14 +25,14 @@ public class FinishLine : MonoBehaviour
             Debug.Log("Mouse cursor is now visible.");
 
             // Stop Rigidbody movement
-            /*Rigidbody rb = collidedObject.GetComponentInParent<Rigidbody>();
+            Rigidbody rb = collidedObject.GetComponentInParent<Rigidbody>();
             if (rb != null)
             {
                 rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 rb.isKinematic = true; // Optional: makes Rigidbody stop responding to physics
                 Debug.Log("Stopped Rigidbody movement.");
-            }*/
+            }
         }
     }
 }
