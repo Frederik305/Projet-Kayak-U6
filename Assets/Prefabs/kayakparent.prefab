@@ -222,7 +222,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0.2
+  currentSpeed: 0.1
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &1552020117248443377
@@ -409,7 +409,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0.2
+  currentSpeed: 0.1
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &3839688595012410112
@@ -462,7 +462,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0.2
+  currentSpeed: 0.1
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &4574981076838814046
@@ -861,6 +861,7 @@ GameObject:
   - component: {fileID: 4765411530967798634}
   - component: {fileID: 896634858188300165}
   - component: {fileID: -4796855517314785662}
+  - component: {fileID: 2366400124450509399}
   m_Layer: 0
   m_Name: kayakparent
   m_TagString: kayak
@@ -1024,6 +1025,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2366400124450509399
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5625220601402287881}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.026295662, y: 0.010999995, z: 0.108680725}
+  m_Center: {x: 0.08333826, y: -0.00001996709, z: 0.8404255}
 --- !u!1 &5699755752600262479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1096,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0.2
+  currentSpeed: 0.1
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &6060971382356184433
@@ -1196,7 +1218,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0.2
+  currentSpeed: 0.1
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &7226593161648126620
@@ -1249,7 +1271,7 @@ MonoBehaviour:
   floaters: 6
   waterDrag: 1
   waterAngularDrag: 1
-  currentSpeed: 0.2
+  currentSpeed: 0.1
   waterSurface: {fileID: 0}
   waterHeight: 0
 --- !u!1 &7832900004836505054

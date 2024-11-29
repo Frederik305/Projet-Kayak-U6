@@ -12,7 +12,7 @@ public class Floater : MonoBehaviour
     [SerializeField] int floaters;
     [SerializeField] float waterDrag;
     [SerializeField] float waterAngularDrag;
-    [SerializeField] float currentSpeed=0.5f;
+    [SerializeField] public float currentSpeed=0.5f;
     [SerializeField] public WaterSurface waterSurface;
     private WaterSearchParameters Search;
     private WaterSearchResult SearchResult;

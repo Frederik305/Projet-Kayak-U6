@@ -1,7 +1,12 @@
 fileFormatVersion: 2
-guid: e6ea96b77acc0ab4e8fc2bac66569066
+<<<<<<<< HEAD:Assets/Prefabs/Finish line.prefab.meta
+guid: 558005c98fd18e94792eedb323754dd9
+PrefabImporter:
+========
+guid: ceba324e4b5845b409ba3848c1ce0295
 folderAsset: yes
 DefaultImporter:
+>>>>>>>> main:Assets/Settings/Build Profiles.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
