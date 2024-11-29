@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4048849928223060233}
   m_Layer: 0
   m_Name: Minimap Camera
-  m_TagString: Untagged
+  m_TagString: MiniMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   volumeAnchorOverride: {fileID: 0}
-  antialiasing: 2
+  antialiasing: 0
   SMAAQuality: 2
   dithering: 0
   stopNaNs: 0
@@ -166,8 +166,8 @@ MonoBehaviour:
   materialMipBias: 0
   m_RenderingPathCustomFrameSettings:
     bitDatas:
-      data1: 5770148942184269
-      data2: 12934340311651418136
+      data1: 4572873155452929
+      data2: 3674938915694837768
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -182,8 +182,8 @@ MonoBehaviour:
     materialQuality: 0
   renderingPathCustomFrameSettingsOverrideMask:
     mask:
-      data1: 0
-      data2: 0
+      data1: 1619578446110528
+      data2: 9259401413673320464
   defaultFrameSettings: 0
   m_Version: 9
   m_ObsoleteRenderingPath: 0
