@@ -69,7 +69,7 @@ public class SplineSampler : MonoBehaviour
     }
 
     private void OnDrawGizmos()
-    {
+    {/*
         // Draw spheres at the central position, p1, and p2
         Handles.color = Color.red;
         Handles.SphereHandleCap(0, position, Quaternion.identity, 0.5f, EventType.Repaint);
@@ -80,6 +80,6 @@ public class SplineSampler : MonoBehaviour
 
         Handles.color = Color.green;
         // Draw a line between p1 and p2 to represent the width
-        Handles.DrawLine(p1, p2);
+        Handles.DrawLine(p1, p2);*/
     }
 }
