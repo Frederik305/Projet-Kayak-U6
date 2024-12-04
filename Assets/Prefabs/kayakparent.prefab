@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 2895994920422393499}
   - component: {fileID: 318791321855486893}
   - component: {fileID: 365216383766148218}
+  - component: {fileID: 7207014626091808349}
   m_Layer: 0
   m_Name: RightPaddle
   m_TagString: Untagged
@@ -761,6 +762,113 @@ MonoBehaviour:
   floater: {fileID: 550938360427839039}
   kayakController: {fileID: 4765411530967798634}
   paddleSide: 1
+  PaddleAudioClips:
+  - {fileID: 8300000, guid: df0c6ee5534cdf54aaf634c6d6ac95f3, type: 3}
+  - {fileID: 8300000, guid: 1af3a7018cc741446996afab36bff385, type: 3}
+  - {fileID: 8300000, guid: 65f08f9dc5bd953448ca51c010d3319d, type: 3}
+  - {fileID: 8300000, guid: ea14236255b13504988e328339d5eed0, type: 3}
+  - {fileID: 8300000, guid: 6c4a32bb1c30eb247831cc9242f05230, type: 3}
+  - {fileID: 8300000, guid: ce436849ac6d4bd4392ea0e5397e20b5, type: 3}
+  - {fileID: 8300000, guid: fac23a3b599839441a8c07bf6531638f, type: 3}
+  - {fileID: 8300000, guid: d73f9ff3e49605a4398772fb6a34ea95, type: 3}
+  paddleAudioSource: {fileID: 7207014626091808349}
+--- !u!82 &7207014626091808349
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243170734469616816}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 6418180475301049370, guid: c21cde2c2b234fb498f9f56c3df0dbde, type: 2}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 5
+  MinDistance: 0.1
+  MaxDistance: 0.5
+  Pan2D: 0.248
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.46944445
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5316553896474722503
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,8 +1077,8 @@ MonoBehaviour:
   isLeftPaddleUnderwater: 0
   isRightPaddleUnderwater: 0
   kayakRigidBody: {fileID: 6856673931736353502}
-  paddleForce: 200
-  paddleRotationForce: 65
+  paddleForce: 120
+  paddleRotationForce: 50
   forceIncreaseRate: 25
 --- !u!33 &896634858188300165
 MeshFilter:
@@ -1110,6 +1218,7 @@ GameObject:
   - component: {fileID: 1633794712046811753}
   - component: {fileID: 6085213974613313444}
   - component: {fileID: 1041789549422241990}
+  - component: {fileID: 7747317055975684993}
   m_Layer: 0
   m_Name: LeftPaddle
   m_TagString: Untagged
@@ -1168,6 +1277,113 @@ MonoBehaviour:
   floater: {fileID: 4505690918168379279}
   kayakController: {fileID: 4765411530967798634}
   paddleSide: 0
+  PaddleAudioClips:
+  - {fileID: 8300000, guid: df0c6ee5534cdf54aaf634c6d6ac95f3, type: 3}
+  - {fileID: 8300000, guid: 1af3a7018cc741446996afab36bff385, type: 3}
+  - {fileID: 8300000, guid: 65f08f9dc5bd953448ca51c010d3319d, type: 3}
+  - {fileID: 8300000, guid: ea14236255b13504988e328339d5eed0, type: 3}
+  - {fileID: 8300000, guid: 6c4a32bb1c30eb247831cc9242f05230, type: 3}
+  - {fileID: 8300000, guid: ce436849ac6d4bd4392ea0e5397e20b5, type: 3}
+  - {fileID: 8300000, guid: fac23a3b599839441a8c07bf6531638f, type: 3}
+  - {fileID: 8300000, guid: d73f9ff3e49605a4398772fb6a34ea95, type: 3}
+  paddleAudioSource: {fileID: 7747317055975684993}
+--- !u!82 &7747317055975684993
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060971382356184433}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 6418180475301049370, guid: c21cde2c2b234fb498f9f56c3df0dbde, type: 2}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 5
+  MinDistance: 0.1
+  MaxDistance: 0.5
+  Pan2D: -0.248
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.46944445
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6655061747081592802
 GameObject:
   m_ObjectHideFlags: 0

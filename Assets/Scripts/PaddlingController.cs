@@ -1,41 +1,61 @@
 using UnityEngine;
-using UnityEngine.ProBuilder.MeshOperations;
 
 public class PaddlingController : MonoBehaviour
 {
-    [SerializeField]  private Floater floater;
-    
+    [SerializeField] private Floater floater;
     [SerializeField] private KayakController kayakController;
-    public enum PaddleSide { LeftPaddle, RightPaddle}
+
+    public enum PaddleSide { LeftPaddle, RightPaddle }
 
     [SerializeField] private PaddleSide paddleSide;
-    
+    [SerializeField] private AudioClip[] PaddleAudioClips;
+
+    [SerializeField] private AudioSource paddleAudioSource;
+
+    private bool wasUnderwater = false; // Pour suivre l'état précédent du paddle
 
     // Update is called once per frame
     void Update()
     {
+        bool isUnderwater = transform.position.y < floater.waterHeight;
 
-        
-        if (paddleSide == PaddleSide.LeftPaddle && transform.position.y < floater.waterHeight) 
+        if (isUnderwater && !wasUnderwater) // Détecte l'entrée dans l'eau
         {
-            kayakController.isLeftPaddleUnderwater = true;
-            Debug.Log("Paddle Left"); 
-            
+            PlayRandomPaddleSound();
+            //paddleAudioSource.Play();
+
+            if (paddleSide == PaddleSide.LeftPaddle)
+            {
+                kayakController.isLeftPaddleUnderwater = true;
+                Debug.Log("Paddle Left");
+            }
+            else if (paddleSide == PaddleSide.RightPaddle)
+            {
+                kayakController.isRightPaddleUnderwater = true;
+                Debug.Log("Paddle Right");
+            }
         }
-        else if (paddleSide == PaddleSide.RightPaddle && transform.position.y < floater.waterHeight)
+        else if (!isUnderwater && wasUnderwater) // Détecte la sortie de l'eau
         {
-            kayakController.isRightPaddleUnderwater = true;
-            Debug.Log("Paddle Right");
+            if (paddleSide == PaddleSide.LeftPaddle)
+            {
+                kayakController.isLeftPaddleUnderwater = false;
+            }
+            else if (paddleSide == PaddleSide.RightPaddle)
+            {
+                kayakController.isRightPaddleUnderwater = false;
+            }
         }
-        else if (paddleSide == PaddleSide.RightPaddle && transform.position.y > floater.waterHeight)
+
+        wasUnderwater = isUnderwater; // Met à jour l'état précédent
+    }
+
+    private void PlayRandomPaddleSound()
+    {
+        if (PaddleAudioClips.Length > 0 && paddleAudioSource != null)
         {
-            kayakController.isRightPaddleUnderwater = false;
-            //
+            int randomIndex = Random.Range(0, PaddleAudioClips.Length);
+            paddleAudioSource.PlayOneShot(PaddleAudioClips[randomIndex]);
         }
-        else if (paddleSide == PaddleSide.LeftPaddle && transform.position.y > floater.waterHeight) 
-        { 
-            kayakController.isLeftPaddleUnderwater = false;
-        }
-        Debug.Log(kayakController.isLeftPaddleUnderwater + " " + kayakController.isRightPaddleUnderwater);
     }
 }
