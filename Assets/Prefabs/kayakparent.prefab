@@ -963,8 +963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 355566872028697069}
-  mouseVerticalSensitivity: 200
-  mouseHorizontalSensitivity: 250
+  mouseVerticalSensitivity: 120
+  mouseHorizontalSensitivity: 180
   camera: {fileID: 4846540748456530706}
   isLeftPaddleUnderwater: 0
   isRightPaddleUnderwater: 0
