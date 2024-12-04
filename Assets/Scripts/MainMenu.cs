@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject settings;
     public void OnStartButtonClicked()
     {
         // Remplacez "GameScene" par le nom de la scène que vous voulez charger
@@ -21,6 +23,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OnSettingButtonClicked()
     {
-
+        settings.SetActive(true);
+        mainMenu.SetActive(false);
     }
 }
