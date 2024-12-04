@@ -1287,13 +1287,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish line (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4870617561901883663, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870617561901883663, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870617561901883663, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9fc401169bd4dd84f883ea4ef1f33d08, type: 3}
+    - target: {fileID: 4870617561901883663, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 156.29063
       objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.74
+      value: 33.46
       objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1301,19 +1317,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5236118
       objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0.52361184
       objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.4752165
       objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.4752164
       objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1325,7 +1341,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8760899649885901801, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -84.452
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855118845175568632, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_Size.x
+      value: 37.660553
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855118845175568632, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6794994
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855118845175568632, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_Size.z
+      value: 24.437878
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855118845175568632, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_Center.x
+      value: -1.0093689
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855118845175568632, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_Center.y
+      value: 0.80872947
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855118845175568632, guid: 558005c98fd18e94792eedb323754dd9, type: 3}
+      propertyPath: m_Center.z
+      value: 12.332436
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3388,7 +3428,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 5634
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 9.94e-43, y: 9.4e-44, z: 0, w: 4.810928e+9}
   m_UseBoundingSphereOverride: 0
