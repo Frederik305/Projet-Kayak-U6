@@ -6,6 +6,7 @@ public class SetOptions : MonoBehaviour
 {
     [SerializeField] private GameObject kayak;
     [SerializeField] private GameObject MainMenu;
+    [SerializeField] private GameObject Setting;
 
     private float volumeValue;
     private float VerticalSensitivity;
@@ -64,6 +65,7 @@ public class SetOptions : MonoBehaviour
     public void MainMenuButton()
     {
         MainMenu.SetActive(true);
+        Setting.SetActive(false);
     }
 
     public void ApplySettings()
