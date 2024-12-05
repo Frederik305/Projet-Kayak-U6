@@ -21,8 +21,8 @@ public class PaddlingController : MonoBehaviour
 
         if (isUnderwater && !wasUnderwater) // Détecte l'entrée dans l'eau
         {
-            PlayRandomPaddleSound();
-            //paddleAudioSource.Play();
+           // PlayRandomPaddleSound();
+            paddleAudioSource.Play();
 
             if (paddleSide == PaddleSide.LeftPaddle)
             {
@@ -49,7 +49,7 @@ public class PaddlingController : MonoBehaviour
 
         wasUnderwater = isUnderwater; // Met à jour l'état précédent
     }
-
+    /*
     private void PlayRandomPaddleSound()
     {
         if (PaddleAudioClips.Length > 0 && paddleAudioSource != null)
@@ -57,5 +57,5 @@ public class PaddlingController : MonoBehaviour
             int randomIndex = Random.Range(0, PaddleAudioClips.Length);
             paddleAudioSource.PlayOneShot(PaddleAudioClips[randomIndex]);
         }
-    }
+    }*/
 }

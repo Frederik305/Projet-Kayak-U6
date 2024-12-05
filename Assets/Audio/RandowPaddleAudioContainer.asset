@@ -76,7 +76,7 @@ AudioRandomContainer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Audio Random Container
+  m_Name: RandowPaddleAudioContainer
   m_Volume: -22.3
   m_Pitch: 208
   m_AutomaticTriggerTime: 0
