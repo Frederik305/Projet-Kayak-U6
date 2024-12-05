@@ -11,6 +11,7 @@ public class PaddlingController : MonoBehaviour
     [SerializeField] private AudioClip[] PaddleAudioClips;
 
     [SerializeField] private AudioSource paddleAudioSource;
+    
 
     private bool wasUnderwater = false; // Pour suivre l'état précédent du paddle
 
