@@ -7,7 +7,7 @@ public class TracePlayerPath : MonoBehaviour
     private GameObject Kayak;
     private Vector3 lastPosition;
     private Vector3 newPosition;
-
+    public float totalDistance = 0f;
     private LineRenderer lineRenderer;
     private List<Vector3> linePositions = new List<Vector3>();
 
@@ -52,8 +52,8 @@ public class TracePlayerPath : MonoBehaviour
                 Debug.Log("New Position: " + newPosition);
 
                 float distanceMoved = Vector3.Distance(lastPosition, newPosition);
-                Debug.Log("Distance moved in last 3 seconds: " + distanceMoved);
-
+                //Debug.Log("Distance moved in last 3 seconds: " + distanceMoved);
+                totalDistance += distanceMoved;
                 lastPosition = newPosition;
             }
 

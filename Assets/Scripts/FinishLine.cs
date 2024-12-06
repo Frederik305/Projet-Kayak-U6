@@ -3,27 +3,20 @@ using UnityEngine.InputSystem;
 
 public class FinishLine : MonoBehaviour
 {
+    
+    [SerializeField] private GameSession gameSession;
     private void OnTriggerEnter(Collider collision)
     {
 
 
-        Debug.Log("Fin");
-
         GameObject collidedObject = collision.gameObject;
-        Debug.Log("Collided with: " + collidedObject.name);
+        
 
-        PlayerInput kayakInputs = collidedObject.GetComponentInParent<PlayerInput>();
+        //PlayerInput kayakInputs = collidedObject.GetComponentInParent<PlayerInput>();
 
-        if (kayakInputs != null)
+        if (collision.CompareTag("kayak"))
         {
-            kayakInputs.SwitchCurrentActionMap("UI");
-            
-            Debug.Log("Disabled PlayerInput.");
-
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Debug.Log("Mouse cursor is now visible.");
-
+            Debug.Log("test");
             // Stop Rigidbody movement
             Rigidbody rb = collidedObject.GetComponentInParent<Rigidbody>();
             if (rb != null)
@@ -33,6 +26,8 @@ public class FinishLine : MonoBehaviour
                 rb.isKinematic = true; // Optional: makes Rigidbody stop responding to physics
                 Debug.Log("Stopped Rigidbody movement.");
             }
+            gameSession.Finish();
         }
+        
     }
 }
