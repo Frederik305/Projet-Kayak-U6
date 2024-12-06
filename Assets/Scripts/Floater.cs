@@ -8,7 +8,7 @@ public class Floater : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] Rigidbody objectWithFloaters;
     [SerializeField] float dephBefSub;
-    [SerializeField] float buoyancy;
+    [SerializeField] public float buoyancy;
     [SerializeField] int floaters;
     [SerializeField] float waterDrag;
     [SerializeField] float waterAngularDrag;
