@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 3383785714315439750}
   m_Layer: 0
   m_Name: Kayak
-  m_TagString: Untagged
+  m_TagString: kayak
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -587,7 +587,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4574981076838814046}
-  m_Material: {fileID: 13400000, guid: cc4d7c2f2cc477344984abc7ab6023d9, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -733,7 +733,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5243170734469616816}
-  m_Material: {fileID: 13400000, guid: df965536dae235c43abb6ff74d1ccf4e, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1248,7 +1248,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6060971382356184433}
-  m_Material: {fileID: 13400000, guid: df965536dae235c43abb6ff74d1ccf4e, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   hasPersistentHistory: 0
   screenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
   screenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  allowDeepLearningSuperSampling: 1
+  allowDeepLearningSuperSampling: 0
   deepLearningSuperSamplingUseCustomQualitySettings: 0
   deepLearningSuperSamplingQuality: 1
   deepLearningSuperSamplingUseCustomAttributes: 0
@@ -1657,8 +1657,8 @@ MonoBehaviour:
   materialMipBias: 0
   m_RenderingPathCustomFrameSettings:
     bitDatas:
-      data1: 140735298675469
-      data2: 18374687029158969352
+      data1: 1266635205771085
+      data2: 18374687012247535640
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
