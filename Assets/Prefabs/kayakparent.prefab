@@ -967,6 +967,7 @@ GameObject:
   - component: {fileID: 6856673931736353502}
   - component: {fileID: 6495918513574666058}
   - component: {fileID: 4765411530967798634}
+  - component: {fileID: 1196004421365828663}
   - component: {fileID: 896634858188300165}
   - component: {fileID: -4796855517314785662}
   - component: {fileID: 2366400124450509399}
@@ -1080,6 +1081,22 @@ MonoBehaviour:
   paddleForce: 120
   paddleRotationForce: 50
   forceIncreaseRate: 25
+--- !u!114 &1196004421365828663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5625220601402287881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9c247d79862e44f91afb1010f012e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.3
+  pointsInSample: 10
+  delayBetweenPoints: 0.35
+  amountOfPointsNeededInRadius: 8
 --- !u!33 &896634858188300165
 MeshFilter:
   m_ObjectHideFlags: 0
