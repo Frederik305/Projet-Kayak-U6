@@ -11,10 +11,13 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private SetOptions setOptions;
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private UnityEngine.UI.Slider loadingBar;
+    [SerializeField] private KayakController kayakController;
     public void Start()
     {
-        setOptions.InitializeSettings();
+        setOptions.InitializeSettings(kayakController);
         loadingScreen.SetActive(false); // Assurez-vous que l'écran de chargement est désactivé au départ
+        settings.SetActive(false);
+        mainMenu.SetActive(true);
     }
     public void OnStartButtonClicked()
     {
