@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    
     private GameSession gameSession;
     void Start()
     {
@@ -21,6 +22,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void OnSettingButtonClicked()
     {
-
+        gameSession.Setting();
     }
 }

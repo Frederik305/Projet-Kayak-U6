@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SetOptions : MonoBehaviour
 {
-    [SerializeField] private GameObject kayak;
-    [SerializeField] private GameObject MainMenu;
+    //[SerializeField] private GameObject kayak;
+    [SerializeField] private GameObject previousCanva;
     [SerializeField] private GameObject Setting;
 
     [SerializeField] private Slider sliderVolume;
@@ -24,11 +24,11 @@ public class SetOptions : MonoBehaviour
 
     void Start()
     {
-        kayakController = kayak.GetComponent<KayakController>();
+        //kayakController = kayak.GetComponent<KayakController>();
 
         
-        SetupResolutionDropdown();
-        LoadSettings();
+        //SetupResolutionDropdown();
+        //LoadSettings();
 
         //resolutionDropdown.value = currentResolutionIndex;
         sliderVolume.value = volumeValue;
@@ -82,9 +82,9 @@ public class SetOptions : MonoBehaviour
         selectedResolution = availableResolutions[selectedResolutionIndex];
     }
 
-    public void MainMenuButton()
+    public void PreviousCanvas()
     {
-        MainMenu.SetActive(true);
+        previousCanva.SetActive(true);
         Setting.SetActive(false);
     }
 
@@ -98,10 +98,10 @@ public class SetOptions : MonoBehaviour
         kayakController.mouseVerticalSensitivity = VerticalSensitivity;
 
         SaveSettings();
-        MainMenuButton();
+        PreviousCanvas();
     }
 
-    private void SetupResolutionDropdown()
+    public void SetupResolutionDropdown()
     {
         resolutionDropdown.ClearOptions();
         resolutionDropdown.onValueChanged.RemoveAllListeners();
@@ -165,10 +165,11 @@ public class SetOptions : MonoBehaviour
             selectedResolution = availableResolutions[resolutionIndex];
         }
     }
-    public void InitializeSettings()
+    public void InitializeSettings(KayakController kayak)
     {
+        kayakController = kayak;
+        SetupResolutionDropdown();
         LoadSettings();
-
         AudioListener.volume = volumeValue;
 
         if (kayakController != null)

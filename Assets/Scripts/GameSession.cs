@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class GameSession : MonoBehaviour
@@ -6,23 +7,32 @@ public class GameSession : MonoBehaviour
     private PlayerInput kayakInputs;
     //private PauseMenu pauseMenu;
     [SerializeField] GameObject pauseMenuCanva;
-    private Camera camera;
+    [SerializeField] GameObject settingsCanva;
+    private Camera cameraMiniMap;
     private FinishLine finishLine;
     [SerializeField] GameObject gameOverCanva;
     private TracePlayerPath tracePlayerPath;
     private GameOver gameOver;
     private float elapsedTime = 0f;
+    private SetOptions setting;
+    [SerializeField] private AudioSource[] audioSourceList;
+    private KayakController kayakController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GameObject kayak = GameObject.Find("kayakparent(Clone)");
+        kayakController = kayak.GetComponent<KayakController>();
         GameObject gameObject = GameObject.FindGameObjectWithTag("MiniMap");
-        camera = gameObject.GetComponent<Camera>();
-        camera.enabled = false;
+        cameraMiniMap = gameObject.GetComponent<Camera>();
+        cameraMiniMap.enabled = false;
         //pauseMenu = GetComponent<PauseMenu>();
        pauseMenuCanva.SetActive(false);
         tracePlayerPath = GetComponentInChildren<TracePlayerPath>();
         gameOver = gameOverCanva.GetComponent<GameOver>();
         gameOverCanva.SetActive(false);
+        settingsCanva.SetActive(false);
+        setting= settingsCanva.GetComponent<SetOptions>();
+        setting.InitializeSettings(kayakController);
 
     }
     void Update()
@@ -40,14 +50,16 @@ public class GameSession : MonoBehaviour
 
     public void Pause()
     {
-        camera.Render();
-        camera.Render();
+        cameraMiniMap.Render();
+        cameraMiniMap.Render();
         kayakInputs = FindFirstObjectByType<PlayerInput>();
         kayakInputs.SwitchCurrentActionMap("UI");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         pauseMenuCanva.SetActive(true);
         Time.timeScale = 0;
+        ToggleAudio();
+
     }
     public void Resume()
     {
@@ -57,6 +69,7 @@ public class GameSession : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuCanva.SetActive(false);
         Time.timeScale = 1;
+        ToggleAudio();
     }
     public void Finish() {
         kayakInputs = FindFirstObjectByType<PlayerInput>();
@@ -66,6 +79,29 @@ public class GameSession : MonoBehaviour
         gameOverCanva.SetActive(true);
         Time.timeScale = 0;
         gameOver.SetRiverDescentStat(elapsedTime,tracePlayerPath.totalDistance);
-        Debug.Log("test2");
+        ToggleAudio();
+
+    }
+    public void Setting()
+    {
+        settingsCanva.SetActive(true);
+        pauseMenuCanva.SetActive(false) ;
+
+    }
+
+    public void ToggleAudio()
+    {
+        foreach (AudioSource audioSource in audioSourceList)
+        {
+            if (audioSource.isPlaying)
+            {
+            audioSource.Pause();
+            }
+            else
+            {
+             audioSource.Play();
+            }
+        }
+        
     }
 }
