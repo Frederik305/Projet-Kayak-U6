@@ -51,7 +51,7 @@ public class GameSession : MonoBehaviour
     public void Pause()
     {
         cameraMiniMap.Render();
-        cameraMiniMap.Render();
+        //cameraMiniMap.Render();
         kayakInputs = FindFirstObjectByType<PlayerInput>();
         kayakInputs.SwitchCurrentActionMap("UI");
         Cursor.visible = true;
