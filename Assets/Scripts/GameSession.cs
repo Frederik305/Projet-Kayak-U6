@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
@@ -43,15 +44,14 @@ public class GameSession : MonoBehaviour
             elapsedTime += Time.deltaTime; // Accumule le temps écoulé depuis le dernier frame
         }
 
-        // Affiche le temps écoulé dans la console (ou tu peux l'afficher à l'écran)
-        // Ici, on peut afficher le temps à la console, ou tu peux ajouter un texte UI si nécessaire
-        Debug.Log("Temps écoulé: " + elapsedTime.ToString("F2") + " secondes");
+      
     }
 
     public void Pause()
     {
         cameraMiniMap.Render();
-        //cameraMiniMap.Render();
+        StartCoroutine(RenderAfterInitialization());
+
         kayakInputs = FindFirstObjectByType<PlayerInput>();
         kayakInputs.SwitchCurrentActionMap("UI");
         Cursor.visible = true;
@@ -72,6 +72,7 @@ public class GameSession : MonoBehaviour
         ToggleAudio();
     }
     public void Finish() {
+        ToggleAudio();
         kayakInputs = FindFirstObjectByType<PlayerInput>();
         kayakInputs.SwitchCurrentActionMap("UI");
         Cursor.visible = true;
@@ -79,7 +80,7 @@ public class GameSession : MonoBehaviour
         gameOverCanva.SetActive(true);
         Time.timeScale = 0;
         gameOver.SetRiverDescentStat(elapsedTime,tracePlayerPath.totalDistance);
-        ToggleAudio();
+        
 
     }
     public void Setting()
@@ -102,6 +103,19 @@ public class GameSession : MonoBehaviour
              audioSource.Play();
             }
         }
+        
+    }
+    IEnumerator RenderAfterInitialization( )
+    {
+        // Attendre que tout soit prêt
+        yield return new WaitForEndOfFrame();
+
+
+
+
+
+        // Forcer le rendu
+        cameraMiniMap.Render();
         
     }
 }
