@@ -24,13 +24,6 @@ public class SetOptions : MonoBehaviour
 
     void Start()
     {
-        //kayakController = kayak.GetComponent<KayakController>();
-
-        
-        //SetupResolutionDropdown();
-        //LoadSettings();
-
-        //resolutionDropdown.value = currentResolutionIndex;
         sliderVolume.value = volumeValue;
         sliderVerticalSensitivity.value = VerticalSensitivity;
         sliderHorizontalSensitivity.value = HorizontalSensitivity;
