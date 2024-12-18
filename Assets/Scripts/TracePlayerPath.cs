@@ -18,7 +18,7 @@ public class TracePlayerPath : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         if (lineRenderer == null)
         {
-            Debug.LogError("LineRenderer component is missing!");
+
             return;
         }
     }
@@ -48,8 +48,7 @@ public class TracePlayerPath : MonoBehaviour
 
                 UpdateLineRenderer();
 
-                Debug.Log("Last Position: " + lastPosition);
-                Debug.Log("New Position: " + newPosition);
+
 
                 float distanceMoved = Vector3.Distance(lastPosition, newPosition);
                 //Debug.Log("Distance moved in last 3 seconds: " + distanceMoved);

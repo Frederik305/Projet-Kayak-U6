@@ -27,19 +27,16 @@ public class StuckKayak : MonoBehaviour
             if (Vector3.Distance(initialPosition, currentPosition) <= radius)
             {
                 pointsInRange++;
-                Debug.Log($"Position {i + 1} is within the radius. Count: {pointsInRange}");
+                
             }
-            else
-            {
-                Debug.Log($"Position {i + 1} is outside the radius.");
-            }
+            
 
             yield return new WaitForSeconds(delayBetweenPoints);
         }
 
         if (pointsInRange >= amountOfPointsNeededInRadius)
         {
-            Debug.Log("At least 3 points are within the radius. Performing action...");
+            
             EndSession();
         }
     }

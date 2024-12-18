@@ -24,7 +24,7 @@ public class FinishLine : MonoBehaviour
                 rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 rb.isKinematic = true; // Optional: makes Rigidbody stop responding to physics
-                Debug.Log("Stopped Rigidbody movement.");
+                
             }
             gameSession.Finish();
         }

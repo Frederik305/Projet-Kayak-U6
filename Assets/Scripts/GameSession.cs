@@ -49,7 +49,7 @@ public class GameSession : MonoBehaviour
 
     public void Pause()
     {
-        cameraMiniMap.Render();
+        //cameraMiniMap.Render();
         StartCoroutine(RenderAfterInitialization());
 
         kayakInputs = FindFirstObjectByType<PlayerInput>();
@@ -63,16 +63,24 @@ public class GameSession : MonoBehaviour
     }
     public void Resume()
     {
-        
+        Debug.Log("Resume");
         kayakInputs.SwitchCurrentActionMap("InGameControl");
-        Cursor.visible = false;
+        
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         pauseMenuCanva.SetActive(false);
         Time.timeScale = 1;
         ToggleAudio();
     }
     public void Finish() {
-        ToggleAudio();
+        pauseMenuCanva.SetActive(false );
+        foreach (AudioSource audioSource in audioSourceList)
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Pause();
+            }
+        }
         kayakInputs = FindFirstObjectByType<PlayerInput>();
         kayakInputs.SwitchCurrentActionMap("UI");
         Cursor.visible = true;

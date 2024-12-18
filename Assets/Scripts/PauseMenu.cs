@@ -16,12 +16,15 @@ public class PauseMenu : MonoBehaviour
 
     public void OnQuitButtonClicked()
     {
-        Time.timeScale = 1.0f;
-        SceneManager.LoadScene(0);
+        gameSession.Finish();
 
     }
     public void OnSettingButtonClicked()
     {
         gameSession.Setting();
+    }
+   void OnResume()
+    {
+        gameSession.Resume();
     }
 }

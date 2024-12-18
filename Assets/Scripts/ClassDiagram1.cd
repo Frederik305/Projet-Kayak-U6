@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinishLine">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="16.875" Y="7" />
+        <Point X="16.875" Y="4.702" />
+        <Point X="19" Y="4.702" />
+        <Point X="19" Y="2.184" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FinishLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Floater">
+    <Position X="21.75" Y="8.75" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.062" Y="7.691" />
+        <Point X="17.062" Y="9.497" />
+        <Point X="20.203" Y="9.497" />
+        <Point X="20.203" Y="9.5" />
+        <Point X="21.75" Y="9.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BAEAAAAABgAhAQAAAAAAAACAAABAAFAAAAAgAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Floater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOver">
+    <Position X="14.5" Y="10.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="16.312" Y="7.691" />
+        <Point X="16.312" Y="10.267" />
+        <Point X="15.25" Y="10.267" />
+        <Point X="15.25" Y="10.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAIAAAIAAACEABAA=</HashCode>
+      <FileName>Assets\Scripts\GameOver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameSession">
+    <Position X="9.5" Y="7.25" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="15.75" Y="7.375" />
+        <Point X="11.375" Y="7.375" />
+        <Point X="11.375" Y="7.375" />
+        <Point X="10.875" Y="7.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AEwgAAAAASAAgCAAAggCIAAAAAAAAAAAAAIAAAjQAIg=</HashCode>
+      <FileName>Assets\Scripts\GameSession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KayakController">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true">
+      <Path>
+        <Point X="17.25" Y="7.346" />
+        <Point X="19.5" Y="7.346" />
+        <Point X="19.5" Y="7.182" />
+        <Point X="21.75" Y="7.182" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EARQcABAAiAAgohYgAABAgAAAAAkAAAEJAIAABAAiCI=</HashCode>
+      <FileName>Assets\Scripts\kayak_controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kayak_Spawner">
+    <Position X="16.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Kayak_Spawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu">
+    <Position X="13" Y="10.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.125" Y="7.691" />
+        <Point X="16.125" Y="10.029" />
+        <Point X="13.688" Y="10.029" />
+        <Point X="13.688" Y="10.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAwAQKEAAAAAAAgAAAAAAACAEAAAAAAAAAAQAQA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PaddlingController">
+    <Position X="19.75" Y="10.5" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="PaddlingController.PaddleSide" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\PaddlingController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="16.875" Y="7.691" />
+        <Point X="16.875" Y="9.755" />
+        <Point X="20.625" Y="9.755" />
+        <Point X="20.625" Y="10.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAgAAACAAAAAAAAggAAAAAGAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PaddlingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.062" Y="7" />
+        <Point X="17.062" Y="4.887" />
+        <Point X="20.75" Y="4.887" />
+        <Point X="20.75" Y="2.761" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PersistentObject">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="16.5" Y="7" />
+        <Point X="16.5" Y="4.209" />
+        <Point X="15.5" Y="4.209" />
+        <Point X="15.5" Y="2.184" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\PersistentObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetBuoyancy">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="16.125" Y="7" />
+        <Point X="16.125" Y="4.685" />
+        <Point X="12" Y="4.685" />
+        <Point X="12" Y="2.184" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SetBuoyancy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetCurrent">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="16.688" Y="7" />
+        <Point X="16.688" Y="4.192" />
+        <Point X="17.25" Y="4.192" />
+        <Point X="17.25" Y="2.184" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SetCurrent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetOptions">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.938" Y="7" />
+        <Point X="15.938" Y="6.292" />
+        <Point X="15.942" Y="6.292" />
+        <Point X="15.942" Y="4.854" />
+        <Point X="11" Y="4.854" />
+        <Point X="11" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AACAUCAQACCAAIAoAAgAICAACgABcAABKAKAAABAAAQ=</HashCode>
+      <FileName>Assets\Scripts\SetOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StuckKayak">
+    <Position X="18" Y="10.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="16.688" Y="7.691" />
+        <Point X="16.688" Y="10.013" />
+        <Point X="18.75" Y="10.013" />
+        <Point X="18.75" Y="10.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EEAAAAAACAAAggAAAAAAAAAAACAAAAAIAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\StuckKayak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TracePlayerPath">
+    <Position X="11.25" Y="10.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="15.938" Y="7.691" />
+        <Point X="15.938" Y="9.773" />
+        <Point X="12" Y="9.773" />
+        <Point X="12" Y="10.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAQCABAAAAAgEAIAABAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TracePlayerPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
+    <Position X="15.75" Y="7" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="LoadingSceneController">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="UnityEngine.MonoBehaviour" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.312" Y="7" />
+        <Point X="16.312" Y="4.444" />
+        <Point X="13.75" Y="4.444" />
+        <Point X="13.75" Y="2.377" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LoadingSceneController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

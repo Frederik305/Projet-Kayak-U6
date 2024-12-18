@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
     }
     private IEnumerator LoadSceneAsync(string sceneName)
     {
-        Debug.Log("Chargement de la scène commencé.");
+        
 
         // Activez l'écran de chargement
         loadingScreen.SetActive(true);
@@ -52,7 +52,7 @@ public class MainMenu : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         if (operation == null)
         {
-            Debug.LogError($"La scène {sceneName} n'a pas pu être trouvée ou chargée.");
+          
             yield break;
         }
 
@@ -62,7 +62,7 @@ public class MainMenu : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f); // Normalise la progression entre 0 et 1
-            Debug.Log($"Progression : {progress * 100}%");
+           
 
             if (loadingBar != null)
                 loadingBar.value = progress;
@@ -70,14 +70,14 @@ public class MainMenu : MonoBehaviour
             // Une fois que le chargement est terminé, activez la scène
             if (operation.progress >= 0.9f)
             {
-                Debug.Log("Chargement terminé. Activation de la scène.");
+               
                 operation.allowSceneActivation = true;
             }
 
             yield return null; // Attend la prochaine frame
         }
 
-        Debug.Log("La scène a été activée avec succès.");
+        
     }
 
 }

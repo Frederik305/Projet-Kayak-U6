@@ -46,6 +46,7 @@ public class KayakController : MonoBehaviour
     void OnResume()
     {
         gameSession.Resume();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     
@@ -53,7 +54,7 @@ public class KayakController : MonoBehaviour
     {
         
         entreeMouvement = valeur.Get<Vector2>();
-        Debug.Log((entreeMouvement.x,entreeMouvement.y));
+        
 
     }
 
@@ -141,7 +142,7 @@ public class KayakController : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(isPaddlingLeft + " " + isPaddlingRight);
+        
         Look();
         if(entreeMouvement.x < 0)
         {
@@ -163,12 +164,7 @@ public class KayakController : MonoBehaviour
             CheckIdleState();
         }
     }
-    private void FixedUpdate()
-    {
-        
-        
-        //Debug.Log(isPaddlingLeft + " " + isPaddlingRight);
-    }
+
 
 
     private IEnumerator ApplyPaddlingForce(Vector3 forwardDirection, Vector3 torqueDirection)
